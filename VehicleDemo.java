@@ -1,3 +1,5 @@
+// Write a JAVA program  to create an abstract class vehicle with abstract methods.Calculate Speed and Velocity.Create subclasses car and bike that extends vehicle class and implement run methods to calculate the speed and velocity of each vehicle
+
 abstract class Vehicle {
     abstract double calculateSpeed();
     abstract double calculateVelocity();
@@ -44,4 +46,5 @@ public class VehicleDemo {
         System.out.println("Bike Speed: " + bike.calculateSpeed() + " units/time");
         System.out.println("Bike Velocity: " + bike.calculateVelocity() + " units/time");
     }
+
 }
