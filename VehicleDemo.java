@@ -7,38 +7,42 @@ abstract class Vehicle {
 class Car extends Vehicle {
     private double distance;
     private double time;
+    private double displacement;
 
-    Car(double distance, double time) {
+    Car(double distance, double time, double displacement) {
         this.distance = distance;
         this.time = time;
+        this.displacement=displacement;
     }
     public double calculateSpeed() {
         return distance / time;
     }
     public double calculateVelocity() {
-        return distance / time;
+        return displacement / time;
     }
 }
 
 class Bike extends Vehicle {
     private double distance;
     private double time;
+    private double displacement;
 
-    Bike(double distance, double time) {
+    Bike(double distance, double time,double displacement) {
         this.distance = distance;
         this.time = time;
+        this.displacement=displacement;
     }
     public double calculateSpeed() {
         return distance / time;
     }
     public double calculateVelocity() {
-        return distance / time;
+        return displacement / time;
     }
 }
 public class VehicleDemo {
     public static void main(String[] args) {
-        Car car = new Car(100.0, 2.0); 
-        Bike bike = new Bike(50.0, 1.5); 
+        Car car = new Car(100.0, 2.0,50); 
+        Bike bike = new Bike(50.0, 1.5,30); 
 
         System.out.println("Car Speed: " + car.calculateSpeed() + " units/time");
         System.out.println("Car Velocity: " + car.calculateVelocity() + " units/time");
@@ -48,3 +52,4 @@ public class VehicleDemo {
     }
 
 }
+
